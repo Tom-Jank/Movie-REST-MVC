@@ -6,14 +6,13 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Movie {
+public class Actor {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String title;
-    private String director;
+    private String actorName;
 
-    public Movie() {}
+    public Actor() {}
 
     public Long getId() {
         return id;
@@ -23,19 +22,11 @@ public class Movie {
         this.id = id;
     }
 
-    public String getTitle() {
-        return title;
+    public String getActorName() {
+        return actorName;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getDirector() {
-        return director;
-    }
-
-    public void setDirector(String director) {
-        this.director = director;
+    public void setActorName(String actorName) {
+        this.actorName = actorName;
     }
 }
