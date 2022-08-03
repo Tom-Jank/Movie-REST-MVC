@@ -1,9 +1,6 @@
 package com.example.demo.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Movie {
@@ -13,6 +10,20 @@ public class Movie {
     private Long id;
     private String director;
     private String title;
+
+    @ManyToOne
+    @JoinColumn(name="actor_id", nullable = false)
+    private Actor actor;
+
+    public Movie() {}
+
+    public Actor getActor() {
+        return actor;
+    }
+
+    public void setActor(Actor actor) {
+        this.actor = actor;
+    }
 
     public Long getId() {
         return id;
