@@ -22,12 +22,12 @@ public class Movie {
         this.id = id;
     }
 
-    public String getAuthor() {
+    public String getDirector() {
         return director;
     }
 
-    public void setAuthor(String author) {
-        this.director = author;
+    public void setDirector(String director) {
+        this.director = director;
     }
 
     public String getTitle() {
